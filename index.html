@@ -1,0 +1,134 @@
+<!--
+	Name: Sonny Chea
+	Date: 02-21-18
+	Professor: Dr. Haim Levkowitz
+	COM.4270 Computer Graphics I
+	Assignment: The purpose of this assignment is to introduce us  to the lower level 2D primitive rendering algorithms, 
+	implemented on a web browser using canvas. The meaning of this is that, for this assignment, we must draw all primitives 
+	yourself (point by point) without using any higher level API functions. (Future assignments will relax this.) We had 
+	some limited discussion our class, but we did have to catch up with the material by watching last years lecture.
+-->
+<html>
+<head>
+	<title>Assignment #1</title>
+	<charset = "UTF-8">
+	<link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+<!-- ------------------------------------------------------------------------------- -->
+
+<div>
+	<p id = "info_user">
+		Name: Sonny Chea </br>
+		Date: 02-21-18 </br>
+		Professor: Dr. Haim Levkowitz </br>
+	</p>
+</div>
+
+<div id = "Top_header">
+	<h1>Drawing Canvas</h1>
+</div>
+
+</br>
+<center>
+	<canvas id= "DrawingSpace">Canvas</canvas>
+</center>
+<!-- ------------------------------------------------------------------------------- -->
+<p id="demo">NOTHING HAS BEEN DRAWN</p>
+	<label for="dcolor">Color(Hex or words):</label>
+    <input type="text" id="dcolor" value="#000000" style="width: 60px">
+	
+	</br>
+	
+    <label for="thickness">Thickness of Shapes:</label>
+    <input type="number" id="thickness" value="1" style="width: 40px">
+
+	</br>
+	
+	<!--
+		Rectangle function that allows the canvas to draw.
+	-->
+	<label for="xRect">X-Coord:</label>
+	<input type="number" id="xRect" value="100" style="width: 40px">
+	<label for="yRect">Y-Coord:</label>
+	<input type="number" id="yRect" value="70" style="width: 40px">
+	<label for="widthRect">Width:</label>
+	<input type="number" id="widthRect" value="50" style="width: 40px">
+	<label for="heightRect">Height:</label>
+	<input type="number" id="heightRect" value="50" style="width: 40px">
+    <button onclick="drawRect()">Rectangle Button</button>
+	
+	</br>
+	<!--
+		Circle function that allows the canvas to draw.
+	-->	
+	<label for="xCircle">Center x:</label>
+	<input type="number" id="xCircle" value="100" style="width: 40px">
+	<label for="yCircle">Center y:</label>
+	<input type="number" id="yCircle" value="70" style="width: 40px">
+	<label for="radiusCircle">radius:</label>
+	<input type="number" id="radiusCircle" value="50" style="width: 40px">
+	<button onclick="drawCircle()">Circle Button</button>
+
+	</br>
+	
+	<!--
+		Line function that allows the canvas to draw.
+	-->	
+	<label for="x1Line">X1-Coord:</label>
+	<input type="number" id="x1Line" value="100" style="width: 40px">
+	<label for="y1Line">Y2-Coord:</label>
+	<input type="number" id="y1Line" value="100" style="width: 40px">
+	<label for="x2Line">X2-Coord:</label>
+	<input type="number" id="x2Line" value="200" style="width: 40px">
+	<label for="y2Line">Y2-Coord:</label>
+	<input type="number" id="y2Line" value="200" style="width: 40px">
+    <button onclick="drawLine()">Line Button</button>
+	
+	</br>
+	
+	<!--
+		Ellipse function that allows the canvas to draw.
+	-->	
+	
+	<label for="xEllipse">Center X-Value:</label>
+	<input type="number" id="xEllipse" value="100" style="width: 40px">
+	<label for="yEllipse">Center Y-Value:</label>
+	<input type="number" id="yEllipse" value="100" style="width: 40px">
+	<label for="radiusx">Radius X-Value:</label>
+	<input type="number" id="radiusx" value="20" style="width: 40px">
+	<label for="radiusy">Radius Y-Value:</label>
+	<input type="number" id="radiusy" value="40" style="width: 40px">
+	<button onclick="drawEllipse()">Ellipse Button</button>
+	
+	</br>
+	
+	<label for="x">x:</label>
+	<input type="number" id="x" value="0" style="width: 40px">
+	<label for="y">y:</label>
+	<input type="number" id="y" value="0" style="width: 40px">
+	
+	</br>
+	
+	<button onclick="buildPolygon()">Polygon Add Point</button>
+	
+	</br>
+	
+	<button onclick="drawPolygon()">Draw Polygon</button>
+	
+	</br>
+	
+	<button onclick="drawOpenPolygon()">Draw Open Polygon</button>
+	
+	</br>
+	
+	<button onclick="resetPolygon()">Empty Polygon</button>
+	
+	</br>
+	
+	<button onclick="cleanCanvas()">Clean</button>
+	
+	</br>
+</body>
+<script src = "js/javascript.js"></script>
+</html>

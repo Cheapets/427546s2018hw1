@@ -1,0 +1,22 @@
+#info_user{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#Top_Header{
+	width: 55%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 1%;
+	color: blue;
+	padding: 2px;
+	border-style: dashed;
+	border-width: light;
+}
+
+#DrawingSpace{
+	height: 50%;
+	width: auto;
+	border-style: solid;
+	border-width: light;
+}
